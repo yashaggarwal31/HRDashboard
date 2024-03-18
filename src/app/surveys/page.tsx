@@ -8,7 +8,8 @@ import { Input } from "@/components/ui/input";
 
 interface FormFields{
   type:FieldTypes,
-  label:string
+  label?:string,
+  options?:string[]
 }
 
 function Surveys() {
@@ -34,9 +35,9 @@ function Surveys() {
         {formFields?.map((item:FormFields)=>(
           <>
           {item.type===FieldTypes.TEXTINPUT &&(<div><label>{item.label}</label><input/></div>)}
-          {item.type==FieldTypes.DROPDOWN &&(<select><option value=""></option><option value=""></option></select>)}
-          {item.type==FieldTypes.CHECKBOX &&(<input type="checkbox"/>)}
-          {item.type==FieldTypes.FILEUPLOAD &&(<input type='file' />)}
+          {item.type==FieldTypes.DROPDOWN &&(<div><label>{item.label}</label><input/><select><option>Choose your pick</option>{item.options!.map((itemVal)=><option>{itemVal}</option>)}</select></div>)}
+          {item.type==FieldTypes.CHECKBOX &&(<div><label>Question: {item.label} </label>{item.options?.map((itemVal)=><><label>{itemVal}</label><input type="checkbox"/></>)}</div>)}
+          {item.type==FieldTypes.FILEUPLOAD &&(<div><label htmlFor="">{item.label}</label><input type='file' /></div>)}
           </>
         ))}
       </form>
