@@ -18,16 +18,17 @@ function Feedbacks() {
       <Navbar />
       <div>
       <h2 className="bold text-3xl ps-10 pt-6">Feedback Form</h2>
-      <form >
+      <form>
         <div className="flex flex-col items-center">
-          <label className="block my-10" htmlFor="feedback">Your Feedback:</label>
+          <label className="block my-6" htmlFor="feedback">Your Feedback:</label>
+          <input className="border-2 my-3 w-1/3"  type="text" placeholder="Title" />
           <textarea className="border-2"
             id="feedback"
             name="feedback"
             // value={feedback}
             rows={5}
             cols={50}
-            
+            placeholder="Feedback"
             required
           />
         <button className="border-2 mt-4">Submit</button>
