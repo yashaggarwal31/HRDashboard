@@ -14,8 +14,6 @@ function Feedbacks() {
   // };
   
   return (
-    <div>
-      <Navbar />
       <div>
       <h2 className="bold text-3xl ps-10 pt-6">Feedback Form</h2>
       <form>
@@ -35,8 +33,6 @@ function Feedbacks() {
         </div>
       </form>
     </div>
-    </div>
-    
   );
 }
 

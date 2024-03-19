@@ -22,9 +22,6 @@ function Tickets() {
 
   const data = paginate(myTickets, currentPage, pageSize);
   return (
-    <div>
-      <Navbar />
-
       <div className="flex">
         <div className="w-[22%] bg-slate-100">Filters</div>
 
@@ -69,7 +66,6 @@ function Tickets() {
           />
         </div>
       </div>
-    </div>
   );
 }
 

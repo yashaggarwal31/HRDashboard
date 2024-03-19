@@ -3,10 +3,7 @@ import Navbar from "@/components/Navbar";
 
 function Surveys() {
   return (
-    <div>
-      <Navbar />
-      <div>Surveys</div>
-    </div>
+    <div>Surveys</div>
   );
 }
 
