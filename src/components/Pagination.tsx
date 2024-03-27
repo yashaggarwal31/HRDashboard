@@ -1,7 +1,8 @@
 import styles from "./Pagination.module.css";
 
 const Pagination = ({ items, pageSize, currentPage, onPageChange }: any) => {
-  const pagesCount = Math.ceil(items / pageSize); // 100/10
+  console.log("items -> ", items);
+  const pagesCount = Math.ceil(items / pageSize);
 
   if (pagesCount === 1) return null;
   const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);

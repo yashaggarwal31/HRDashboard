@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/UserNavbar";
 import { useRouter } from "next/router";
 
 function Show({ searchParams }: any) {

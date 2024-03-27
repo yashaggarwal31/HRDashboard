@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import TicketGeneratorButton from "./TicketGeneratorButton";
 
-const Navbar: React.FC = () => {
+const UserNavbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -54,26 +54,26 @@ const Navbar: React.FC = () => {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 <Link
-                  href="/"
+                  href="/user"
                   className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
                   aria-current="page"
                 >
                   Dashboard
                 </Link>
                 <Link
-                  href="/tickets"
+                  href="/user/tickets"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Tickets
                 </Link>
                 <Link
-                  href="/feedbacks"
+                  href="/user/feedbacks"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Feedbacks
                 </Link>
                 <Link
-                  href="/surveys"
+                  href="/user/surveys"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Surveys
@@ -197,4 +197,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar;
+export default UserNavbar;

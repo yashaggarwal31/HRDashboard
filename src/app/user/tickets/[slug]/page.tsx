@@ -1,6 +1,6 @@
 "use client";
 
-import { myTickets } from "@/app/data/myTickets";
+import { myTickets } from "@/data/myTickets";
 import { postTicket } from "@/lib/data";
 import React, { useState } from "react";
 
